@@ -1,0 +1,17 @@
+<form>
+    <div>
+        <div id="url-input">
+            <label for="url-input-area">Plain Text</label>
+            <textarea id="url-input-area" name="url-input-area" [(ngModel)]="data" (input)="sendData()"></textarea>
+        </div>
+        <div id="contact-input">
+            <label for="contact-input-area">Plain Text</label>
+            <textarea id="contact-input-area" name="contact-input-area" [(ngModel)]="data" (input)="sendData()"></textarea>
+        </div>
+        <div id="plain-text-input" style="display: flex; flex-direction: column;">
+            <label for="plain-text-input-area">Plain Text</label>
+            <textarea id="plain-text-input-area" name="plain-text-input-area" [(ngModel)]="data"
+                (input)="sendData()"></textarea>
+        </div>
+    </div>
+</form>

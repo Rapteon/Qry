@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ConfigurationService } from '../configuration.service';
+import { ConfigurationService } from '../qr-generator/configuration.service';
 
 @Component({
   selector: 'app-header',
