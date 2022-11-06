@@ -1,7 +1,77 @@
 /* For mobile */
 @media (min-width: 360px) {
-}
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
 
+    .header {
+        display: flex;
+        background-color: var(--klein-blue);
+        color: white;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .title {
+        margin-left: 3%;
+        font-size: 18pt;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 20pt;
+        flex-basis: 10%;
+        margin-right: 3%;
+        border: 1px solid white;
+        border-radius: 8px;
+        padding: 0.5%;
+    }
+
+    .menu>img {
+        width: 100%;
+        filter: invert(100%);
+    }
+
+    .menu-touch {
+        background-color: white;
+        color: var(--klein-blue);
+        cursor: pointer;
+    }
+
+    .menu-touch>img {
+        filter: invert(0%);
+    }
+
+    .configurator {
+        align-self: flex-end;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        background-color: var(--blue-yonder);
+        padding: 1%;
+    }
+
+    .input-display {
+        margin: 5%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    .select {
+        background-color: var(--blue-yonder);
+        border: 2px solid black;
+    }
+
+    .select>option {
+        background-color: var(--blue-yonder);
+    }
+}
 
 /* For desktop */
 @media (min-width: 992px) {
@@ -41,13 +111,13 @@
         filter: invert(100%);
     }
 
-    .menu:hover {
+    .menu-touch {
         background-color: white;
         color: var(--klein-blue);
         cursor: pointer;
     }
 
-    .menu:hover>img {
+    .menu-touch>img {
         filter: invert(0%);
     }
 

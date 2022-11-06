@@ -1,7 +1,7 @@
 <div class="container">
     <div class="header">
         <p class="title">QRy</p>
-        <div class="menu" (click)="toggleShowConfigurator()">
+        <div class="menu" (click)="toggleShowConfigurator()" [ngClass]="{'menu-touch' : showConfigurator}">
             <img src="assets/icons/menu.svg">
         </div>
     </div>
