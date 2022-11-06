@@ -22,5 +22,13 @@
                 <option [value]="i" *ngFor="let i of QRVersions">{{i}}</option>
             </select>
         </form>
+        <form class="input-display">
+            <label for="qr-width">Width</label>
+            <select class="select" id="qr-width" name="qr-width" [(ngModel)]="selectedWidth" (change)="setQRWidth()">
+                <option value="128">128</option>
+                <option value="256">256</option>
+                <option value="512">512</option>
+            </select>
+        </form>
     </div>
 </div>

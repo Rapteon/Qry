@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ConfigurationService } from '../qr-generator/configuration.service';
+import { DefaultQRConfiguration } from '../qr-generator/DefaultQRConfiguration';
 
 @Component({
   selector: 'app-header',
@@ -11,6 +12,7 @@ export class HeaderComponent implements OnInit {
   QRVersions: Array<number>;
   selectedQRVersion: number;
   selectedQRErrorLevel: 'L' | 'M' | 'H';
+  selectedWidth: number;
 
   constructor(private configurationService: ConfigurationService) {
     this.showConfigurator = false;
@@ -24,8 +26,9 @@ export class HeaderComponent implements OnInit {
       31, 32, 33, 34, 35,
       36, 37, 38, 39, 40
     ]
-    this.selectedQRVersion = 4;
-    this.selectedQRErrorLevel = 'M';
+    this.selectedQRVersion = DefaultQRConfiguration.version;
+    this.selectedQRErrorLevel = DefaultQRConfiguration.errorCorrectionLevel;
+    this.selectedWidth = DefaultQRConfiguration.width;
   }
 
   ngOnInit(): void {
@@ -43,5 +46,9 @@ export class HeaderComponent implements OnInit {
 
   setQRVersion(): void {
     this.configurationService.setQRVersion(this.selectedQRVersion);
+  }
+
+  setQRWidth(): void {
+    this.configurationService.setQRWidth(this.selectedWidth);
   }
 }

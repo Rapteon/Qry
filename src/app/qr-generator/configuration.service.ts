@@ -33,8 +33,8 @@ export class ConfigurationService {
     this.updateConfig();
   }
 
-  setWidth(width: number): void {
-    console.assert(width >= 256 && width <= 512, "Width must be between 256 and 512");
+  setQRWidth(width: number): void {
+    console.assert(width >= 128 && width <= 512, "Width must be between 128 and 512");
     this.width = width;
     this.updateConfig();
   }
