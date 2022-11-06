@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="header">
+        <p class="title">QRy</p>
+        <div class="menu" (click)="toggleShowConfigurator()">
+            <img src="assets/icons/menu.svg">
+        </div>
+    </div>
+    <div *ngIf="showConfigurator" class="configurator">
+        <form class="input-display">
+            <label for="error-correction-level">Error Correction Level</label>
+            <select class="select" id="error-correction-level" name="error-correction-level"
+                [(ngModel)]="selectedQRErrorLevel" (change)="setQRErrorLevel()">
+                <option value="L">Low</option>
+                <option value="M">Medium</option>
+                <option value="H">High</option>
+            </select>
+        </form>
+        <form class="input-display">
+            <label for="qr-version">QR Version</label>
+            <select class="select" id="qr-version" name="qr-version" [(ngModel)]="selectedQRVersion"
+                (change)="setQRVersion()">
+                <option [value]="i" *ngFor="let i of QRVersions">{{i}}</option>
+            </select>
+        </form>
+    </div>
+</div>
