@@ -1,4 +1,4 @@
-<div style="flex-basis: 100%;">
+<div class="container">
     <qrcode class="qr" [elementType]="'url'" [qrdata]="data" [width]="config.width" [allowEmptyString]="true" [errorCorrectionLevel]="config.errorCorrectionLevel"></qrcode>
     <button type="button" (click)="downloadQR()">Download</button>
 </div>
