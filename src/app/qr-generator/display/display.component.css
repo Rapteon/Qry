@@ -6,9 +6,6 @@
         align-items: center;
         justify-content: space-between;
     }
-    .container > button {
-        width: 50%;
-    }
 }
 
 /* For desktop */

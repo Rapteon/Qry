@@ -6,11 +6,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { QrGeneratorModule } from './qr-generator/qr-generator.module';
+import { InputSwitcherComponent } from './input-switcher/input-switcher.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    InputSwitcherComponent
   ],
   imports: [
     BrowserModule,

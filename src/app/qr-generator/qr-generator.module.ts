@@ -12,7 +12,7 @@ import { FormsModule } from '@angular/forms';
   declarations: [
     InputComponent,
     DisplayComponent,
-    GeneratorComponent
+    GeneratorComponent,
   ],
   imports: [
     CommonModule,

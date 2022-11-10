@@ -51,7 +51,7 @@
         width: 100%;
         display: flex;
         flex-direction: column;
-        background-color: var(--blue-yonder);
+        background-color: var(--yonder-blue);
         padding: 1%;
     }
 
@@ -64,12 +64,12 @@
     }
 
     .select {
-        background-color: var(--blue-yonder);
+        background-color: var(--yonder-blue);
         border: 2px solid black;
     }
 
     .select>option {
-        background-color: var(--blue-yonder);
+        background-color: var(--yonder-blue);
     }
 }
 
@@ -126,7 +126,7 @@
         width: 20%;
         display: flex;
         flex-direction: column;
-        background-color: var(--blue-yonder);
+        background-color: var(--yonder-blue);
         padding: 1%;
     }
 
@@ -139,11 +139,11 @@
     }
 
     .select {
-        background-color: var(--blue-yonder);
+        background-color: var(--yonder-blue);
         border: 2px solid black;
     }
 
     .select>option {
-        background-color: var(--blue-yonder);
+        background-color: var(--yonder-blue);
     }
 }
