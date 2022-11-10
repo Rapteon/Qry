@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { SwitcherService } from '../switcher.service';
 
 @Component({
   selector: 'app-input-switcher',
@@ -8,11 +8,9 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class InputSwitcherComponent implements OnInit {
   selectedButton: string;
-  selectedInputTypeSubject: BehaviorSubject<string>;
 
-  constructor() {
+  constructor(private switcherService: SwitcherService) {
     this.selectedButton = "plain-text";
-    this.selectedInputTypeSubject = new BehaviorSubject(this.selectedButton);
   }
 
   ngOnInit(): void {
@@ -20,6 +18,6 @@ export class InputSwitcherComponent implements OnInit {
 
   clicked(selectedButton: "plain-text"|"upi"|"contact"): void {
     this.selectedButton = selectedButton;
-    this.selectedInputTypeSubject.next(this.selectedButton);
+    this.switcherService.selectedInputTypeSubject.next(this.selectedButton);
   }
 }

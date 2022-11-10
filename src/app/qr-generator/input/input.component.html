@@ -1,7 +1,17 @@
-<form>
-    <div id="plain-text-input" style="display: flex; flex-direction: column; justify-content: space-between;">
+<form [ngSwitch]="selectedButton">
+    <div *ngSwitchCase="'plain-text'" id="plain-text-input" style="display: flex; flex-direction: column; justify-content: space-between;">
         <label for="plain-text-input-area">Plain Text</label>
         <textarea id="plain-text-input-area" name="plain-text-input-area" [(ngModel)]="data"
+            (input)="sendData()"></textarea>
+    </div>
+    <div *ngSwitchCase="'upi'" id="upi-input" style="display: flex; flex-direction: column; justify-content: space-between;">
+        <label for="upi-input-area">UPI ID</label>
+        <textarea id="upi-input-area" name="upi-input-area" [(ngModel)]="data"
+            (input)="sendData()"></textarea>
+    </div>
+    <div *ngSwitchCase="'contact'" id="contact-input" style="display: flex; flex-direction: column; justify-content: space-between;">
+        <label for="contact-input-area">Contact</label>
+        <textarea id="contact-input-area" name="contact-input-area" [(ngModel)]="data"
             (input)="sendData()"></textarea>
     </div>
 </form>

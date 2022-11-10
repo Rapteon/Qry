@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { SwitcherService } from 'src/app/switcher.service';
 import { DefaultData } from '../DefaultData';
 import { DataService } from '../qr-generator/data.service';
 
@@ -9,9 +11,15 @@ import { DataService } from '../qr-generator/data.service';
 })
 export class InputComponent implements OnInit {
   data: string;
+  selectedButton: string;
 
-  constructor(private dataService: DataService) {
+  constructor(private dataService: DataService, private switcherService: SwitcherService) {
     this.data = DefaultData;
+    this.selectedButton = "plain-text";
+    this.switcherService.selectedInputTypeSubject.subscribe((selectedButton) => {
+      this.selectedButton = selectedButton;
+      console.log(this.selectedButton);
+    })
   }
 
   ngOnInit(): void {
