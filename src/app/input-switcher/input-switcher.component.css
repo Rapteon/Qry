@@ -6,27 +6,26 @@
         justify-content: space-evenly;
         align-items: center;
         background-color: var(--klein-blue);
-        padding: 3%;
     }
 
     .switcher-button {
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-color: var(--klein-blue);
+        background-color: inherit;
         padding: 1%;
         width: 33%;
     }
 
     .switcher-button > svg {
-        height: 13pt;
-        width: 13pt;
+        height: 18pt;
+        width: 18pt;
         border-radius: 8px;
         padding: 3%;
     }
 
     .switcher-button > label {
-        font-size: 16pt;
+        font-size: 12pt;
     }
 
     .pressed-button > svg {
