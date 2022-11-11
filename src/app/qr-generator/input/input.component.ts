@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Subscription } from 'rxjs';
 import { SwitcherService } from 'src/app/switcher.service';
 import { DefaultData } from '../DefaultData';
 import { DataService } from '../qr-generator/data.service';
