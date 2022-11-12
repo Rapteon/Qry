@@ -5,13 +5,14 @@
             (input)="sendData()"></textarea>
     </div>
     <form *ngSwitchCase="'upi'" id="upi-input" style="display: flex; flex-direction: column; justify-content: space-between;">
+        <label>UPI</label>
         <label for="account-holder-name">Name</label>
         <input name="account-holder-name" id="account-holder-name" type="text" [(ngModel)]="UPIData.accountHolderName" (input)="sendData()">
         <label for="upi-id">UPI ID</label>
         <input name="upi-id" id="upi=id" type="text" [(ngModel)]="UPIData.UPIId" (input)="sendData()">
     </form>
     <div *ngSwitchCase="'contact'" id="contact-input" style="display: flex; flex-direction: column; justify-content: space-between;">
-        <label for="contact-input-area">Contact</label>
+        <label>Contact</label>
         <div style="display: flex; flex-direction: column; align-items: flex-start;">
             <label for="first-name">First Name*</label>
             <input name="first-name" id="first-name" type="text" [(ngModel)]="contactData.firstName" (input)="sendData()">
