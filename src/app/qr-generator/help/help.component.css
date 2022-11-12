@@ -1,0 +1,23 @@
+@media (min-width: 360px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        height: 20vh;
+        align-items: flex-start;
+        margin-top: 1%;
+    }
+
+    .help-icon {
+        display: flex;
+        align-items: center;
+        border: 1px solid var(--black);
+        border-radius: 8px;
+        padding: 1%;
+    }
+
+    .help-text {
+        width: 100%;
+        overflow-y: auto;
+        overflow-wrap: break-word;
+    }
+}

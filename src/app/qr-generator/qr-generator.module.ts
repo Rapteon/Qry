@@ -5,6 +5,7 @@ import { DisplayComponent } from './display/display.component';
 import { GeneratorComponent } from './generator/generator.component';
 import { QRCodeModule } from 'angularx-qrcode';
 import { FormsModule } from '@angular/forms';
+import { HelpComponent } from './help/help.component';
 
 
 
@@ -13,6 +14,7 @@ import { FormsModule } from '@angular/forms';
     InputComponent,
     DisplayComponent,
     GeneratorComponent,
+    HelpComponent,
   ],
   imports: [
     CommonModule,

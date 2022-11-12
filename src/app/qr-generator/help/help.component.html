@@ -1,0 +1,7 @@
+<div class="container">
+    <div class="help-icon" (click)="toggleHelp()">
+        <img src="assets/icons/help.svg">
+        <label for="text">Help</label>
+    </div>
+    <p class="help-text" *ngIf="displayHelp">{{text}}</p>
+</div>

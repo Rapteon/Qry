@@ -23,7 +23,6 @@ export class DisplayComponent implements OnInit {
   ngOnInit(): void {
     this.configurationService.configurationSubject.subscribe(config => {
       this.config = config;
-      console.log(this.config);
     });
 
     this.dataService.dataSubject.subscribe(data => {
