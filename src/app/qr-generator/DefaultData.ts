@@ -1,1 +1,1 @@
-export const DefaultData: string = 'Qry';
+export const DefaultData: string = '';
