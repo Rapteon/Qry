@@ -26,6 +26,6 @@ export class InputComponent implements OnInit {
 
   sendData(): void {
     console.log(this.data);
-    this.dataService.sendData(this.data);
+    this.dataService.dataSubject.next(this.data);
   }
 }
