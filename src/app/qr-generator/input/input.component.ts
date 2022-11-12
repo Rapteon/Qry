@@ -42,7 +42,6 @@ export class InputComponent implements OnInit {
     this.switcherService.selectedInputTypeSubject.subscribe(
       (selectedButton) => {
         this.selectedButton = selectedButton;
-        console.log(this.selectedButton);
         this.setHelpText(selectedButton);
       }
     );
@@ -52,7 +51,6 @@ export class InputComponent implements OnInit {
   ngOnInit(): void {}
 
   sendData(): void {
-    console.log(this.data);
     switch (this.selectedButton) {
       case 'plain-text':
         this.dataService.dataSubject.next(this.data);

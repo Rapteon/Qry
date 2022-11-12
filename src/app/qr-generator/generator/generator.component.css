@@ -1,6 +1,7 @@
 /* For mobile */
 @media (min-width: 360px) {
     .container {
+        height: 60vh;
         display: flex;
         flex-direction: column-reverse;
         justify-content: space-between;

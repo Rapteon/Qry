@@ -1,3 +1,6 @@
 <div class="container">
     <qrcode class="qr" [elementType]="'url'" [qrdata]="data" [width]="config.width" [allowEmptyString]="true" [errorCorrectionLevel]="config.errorCorrectionLevel"></qrcode>
+    <div>
+        <button class="download-button" type="button" (click)="downloadQR()">Download</button>
+    </div>
 </div>

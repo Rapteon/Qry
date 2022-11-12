@@ -32,7 +32,6 @@ export class DisplayComponent implements OnInit {
 
   downloadQR(): void {
     let qr = document.querySelectorAll(".qr")[0].children[0].children[0] as HTMLElement;
-    console.log(qr.getAttribute("src"))
     let link: HTMLAnchorElement = document.createElement("a") as HTMLAnchorElement;
     link.href = qr.getAttribute("src")!;
     link.download = "qr-code.png";
