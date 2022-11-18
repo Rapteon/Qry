@@ -1,17 +1,17 @@
-<form [ngSwitch]="selectedButton" style="width: 80%;">
-    <div *ngSwitchCase="'plain-text'" id="plain-text-input" style="display: flex; flex-direction: column; justify-content: space-between;">
+<form [ngSwitch]="selectedButton" style="width: 80%; height: 80vh;">
+    <div *ngSwitchCase="'plain-text'" id="plain-text-input">
         <label for="plain-text-input-area">Plain Text</label>
         <textarea id="plain-text-input-area" name="plain-text-input-area" [(ngModel)]="data"
             (input)="sendData()"></textarea>
     </div>
-    <form *ngSwitchCase="'upi'" id="upi-input" style="display: flex; flex-direction: column; justify-content: space-between;">
+    <div *ngSwitchCase="'upi'" id="upi-input">
         <label>UPI</label>
         <label for="account-holder-name">Name</label>
         <input name="account-holder-name" id="account-holder-name" type="text" [(ngModel)]="UPIData.accountHolderName" (input)="sendData()">
         <label for="upi-id">UPI ID</label>
         <input name="upi-id" id="upi=id" type="text" [(ngModel)]="UPIData.UPIId" (input)="sendData()">
-    </form>
-    <div *ngSwitchCase="'contact'" id="contact-input" style="display: flex; flex-direction: column; justify-content: space-between;">
+    </div>
+    <div *ngSwitchCase="'contact'" id="contact-input">
         <label>Contact</label>
         <div style="display: flex; flex-direction: column; align-items: flex-start;">
             <label for="first-name">First Name*</label>

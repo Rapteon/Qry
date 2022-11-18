@@ -1,0 +1,17 @@
+#plain-text-input {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#upi-input {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#contact-input {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

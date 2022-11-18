@@ -8,6 +8,12 @@
         padding: 3%;
         margin: 3%;
     }
+    app-input {
+        flex-basis: 60%;
+    }
+    app-display {
+        flex-basis: 40%;
+    }
 }
 
 /* For desktop */
