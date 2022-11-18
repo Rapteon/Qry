@@ -6,6 +6,9 @@
         align-items: center;
         justify-content: space-between;
     }
+    qrcode {
+        flex-basis: 80%;
+    }
     .download-button {
         color: white;
         background: var(--klein-blue);
