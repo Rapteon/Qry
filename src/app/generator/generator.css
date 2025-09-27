@@ -1,0 +1,12 @@
+#generator-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height:  100%;
+}
+
+
+textarea {
+    width: 100%;
+    height:30vh;
+}
