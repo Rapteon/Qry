@@ -1,0 +1,12 @@
+<header>
+    <h1>Qry</h1>
+    <div (click)="toggleDropdown()">
+        @if (isConfiguring()) {
+            <img src="images/svg/dropdown-icon-open.svg"/>
+        }
+        @else {
+            <img class="icon-pushed" src="images/svg/dropdown-icon-closed.svg"/>
+        }
+    </div>
+    <!-- Add code for configuring error correction and size here. -->
+</header>
