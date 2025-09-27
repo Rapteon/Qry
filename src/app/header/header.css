@@ -1,0 +1,17 @@
+header {
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content: space-between;
+    flex-wrap:wrap;
+}
+
+.options {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width:100%;
+    background-color:var(--yonder-blue);
+    color: var(--black);
+    padding: 1em;
+}
