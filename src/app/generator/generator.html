@@ -1,6 +1,11 @@
 <div id="generator-container">
     <qrcode [allowEmptyString]="true" [qrdata]="data" (qrCodeURL)="updateUrl($event)"></qrcode>
     <textarea placeholder="Enter some text" [(ngModel)]="data" autofocus></textarea>
-    <button type="button" (click)="downloadImage()">Download</button>
-    <a id="download-link" [href]="url" download="qr-code.png"></a>
+    <div id="buttons">
+        <button id="download-button" type="button" (click)="downloadImage()">Download</button>
+        <a id="download-link" [href]="url" download="qr-code.png"></a>
+        @if (canShare){
+        <button id="share-button" type="button" (click)="shareImage()">Share</button>
+        }
+    </div>
 </div>
