@@ -1,43 +1,79 @@
 #generator-container {
+  display: flex;
+}
+
+textarea {
+  width: 100%;
+}
+
+#download-button,
+#share-button {
+  background-color: var(--klein-blue);
+  color: white;
+}
+
+@media screen and (max-width: 500px) {
+  textarea {
+    height: 20em;
+    font-size: 14pt;
+  }
+  #generator-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height:  100%;
-}
-
-
-textarea {
-    width: 100%;
-    height:30vh;
-}
-
-#download-link {
-    display: none;
-}
-
-#buttons {
+  }
+  #buttons {
     display: flex;
     justify-content: space-evenly;
     margin: 1em;
-    width: 50%;
+  }
 }
 
-#buttons > button:hover {
+@media screen and (min-width: 800px) {
+  textarea {
+    font-size: 15pt;
+    height: 20em;
+  }
+  #generator-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    height: 100%;
+  }
+  #buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 1em;
+  }
+
+  #buttons > button:hover {
     background-color: white;
     color: black;
     border: 1px solid black;
     transition-property: all;
     transition-duration: 150ms;
+  }
+}
+
+#download-link {
+  display: none;
 }
 
 #buttons > button {
-    border: none;
-    display: inline-block;
-    padding: 0.5em;
-    border: 1px solid white;
+  border: none;
+  display: inline-block;
+  padding: 0.5em;
+  border: 1px solid white;
 }
 
-#download-button, #share-button{
-    background-color: var(--klein-blue);
-    color: white;
+#generator-container > qrcode {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-basis: 100%;
+  margin: 1em;
 }

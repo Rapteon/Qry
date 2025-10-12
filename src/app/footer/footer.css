@@ -1,0 +1,37 @@
+footer {
+  border-top: 3px solid var(--klein-blue);
+}
+
+@media screen and (max-width: 500px) {
+  a {
+    text-decoration-line: none;
+    padding: 0.25em;
+    border: 1px solid var(--klein-blue);
+  }
+  a:after {
+    content: "↗";
+  }
+  a:active {
+    color: var(--klein-blue);
+  }
+  a:visited {
+    color: var(--klein-blue);
+  }
+}
+
+@media screen and (min-width: 800px) {
+  a {
+    text-decoration-line: none;
+    padding: 0.25em;
+  }
+  a:hover {
+    transition-property: all;
+    transition-duration: 150ms;
+    background-color: var(--klein-blue);
+    color: whitesmoke;
+  }
+  a:hover::after {
+    transition-duration: 1s;
+    content: "↗"
+  }
+}
